@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.YoutubePlayer3" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimaryVariant">@color/color_oranges</item>
+        <item name="colorOnPrimary">@color/color_red</item>
+        <item name="android:statusBarColor">@color/white</item>
+
+    </style>
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+    </style>
+
+    <style name="color_gradient">
+        <item name="color">@color/custom_color_name_app</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+</resources>

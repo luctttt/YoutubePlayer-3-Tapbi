@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_imageVideoSearch"
+            android:layout_width="157dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/image_searchvideo" />
+
+        <TextView
+            android:id="@+id/txt_durationVideoSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/custom_time_video"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_imageVideoSearch"
+            app:layout_constraintEnd_toEndOf="@id/img_imageVideoSearch"
+            tools:text="4:28" />
+
+        <TextView
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/roboto_regular"
+            android:maxWidth="200dp"
+            android:id="@+id/txt_nameVideoItemSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/img_imageVideoSearch"
+            app:layout_constraintTop_toTopOf="@+id/img_imageVideoSearch"
+            tools:text="Marron 5 - Sugar(Official Music Video)" />
+
+        <TextView
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="4dp"
+            android:id="@+id/txt_authorItemSearch"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/img_imageVideoSearch"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nameVideoItemSearch"
+            tools:text="Maroon 5 " />
+
+        <TextView
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="4dp"
+            android:id="@+id/txt_timeViewItemSearch"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/img_imageVideoSearch"
+            app:layout_constraintTop_toBottomOf="@+id/txt_authorItemSearch"
+            tools:text="3.2B views - 5 year ago " />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="64dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="110dp"
+            app:layout_constraintTop_toBottomOf="@+id/img_imageVideoSearch" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

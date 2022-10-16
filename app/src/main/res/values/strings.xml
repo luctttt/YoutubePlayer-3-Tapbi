@@ -1,0 +1,59 @@
+<resources>
+    <!-- activity -->
+    <string name="app_name">YoutubePlayer</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="setting">Setting</string>
+    <string name="trending">Trending</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- home -->
+    <string name="share">Share</string>
+    <string name="download">Download</string>
+    <string name="upnext">Upnext</string>
+    <string name="comment">Comment</string>
+    <string name="youtube_music">Youtube Music</string>
+    <string name="top_4_trendding">#Top 4 trendding</string>
+    <string name="view">views</string>
+
+    <!--- setting -->
+    <string name="language">Language</string>
+    <string name="play_background">Play background</string>
+    <string name="Get_notifications_in_morning">Get notifications in morning</string>
+    <string name="Policy">Policy</string>
+    <string name="search_youtube">Search youtube…</string>
+    <string name="recent">Recent</string>
+
+    <string name="on">On</string>
+    <string name="off">Off</string>
+
+
+    <!--- time -->
+    <string name="years_ago">years ago</string>
+    <string name="hours_ago">hours ago</string>
+    <string name="minutes_ago">minutes ago</string>
+    <string name="seconds_ago">seconds ago</string>
+    <string name="days_ago">days ago</string>
+    <string name="just_now">just now</string>
+
+
+    <string name="trending_videos">Trending videos</string>
+    <string name="ti_ng_vi_t">VietNamese</string>
+    <string name="ti_ng_anh">English</string>
+    <string name="ch_y_d_i_background">Play in background</string>
+    <string name="b_o_th_c_v_o_7h_s_ng">Alarm at 7am</string>
+    <string name="move_to_terms_and_services_page">Move to terms and services page</string>
+    <string name="trending_video">Trending videos</string>
+    <string name="create_api_key">Create api key</string>
+    <string name="enter_your_key_api">Enter your key api</string>
+    <string name="confirm">Confirm</string>
+    <string name="network_connection_is_not_available">Network connection is not available</string>
+    <string name="no_data">No data</string>
+
+
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        tools:layout="@layout/fragment_home"
+        android:id="@+id/nav_home"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_trending2"
+            app:destination="@id/nav_trending" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_search"
+        android:id="@+id/nav_search"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.search.SearchFragment"
+        android:label="SearchFragment" >
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_setting"
+        android:id="@+id/nav_setting"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.setting.SettingFragment"
+        android:label="FragmentSetting" >
+        <action
+            app:enterAnim="@anim/open_enter"
+            app:exitAnim="@anim/open_exit"
+            app:popEnterAnim="@anim/back_open"
+            app:popExitAnim="@anim/back_exit"
+            android:id="@+id/action_fragmentSetting_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            app:enterAnim="@anim/open_enter"
+            app:exitAnim="@anim/open_exit"
+            app:popEnterAnim="@anim/back_open"
+            app:popExitAnim="@anim/back_exit"
+            android:id="@+id/action_fragmentSetting_to_playbackgroundFragment"
+            app:destination="@id/playbackgroundFragment" />
+        <action
+            app:enterAnim="@anim/open_enter"
+            app:exitAnim="@anim/open_exit"
+            app:popEnterAnim="@anim/back_open"
+            app:popExitAnim="@anim/back_exit"
+            android:id="@+id/action_fragmentSetting_to_getNotificationFragment"
+            app:destination="@id/getNotificationFragment" />
+        <action
+            app:enterAnim="@anim/open_enter"
+            app:exitAnim="@anim/open_exit"
+            app:popEnterAnim="@anim/back_open"
+            app:popExitAnim="@anim/back_exit"
+            android:id="@+id/action_fragmentSetting_to_policyFragment"
+            app:destination="@id/policyFragment" />
+        <action
+            app:enterAnim="@anim/open_enter"
+            app:exitAnim="@anim/open_exit"
+            app:popEnterAnim="@anim/back_open"
+            app:popExitAnim="@anim/back_exit"
+            android:id="@+id/action_nav_setting_to_createApiFragment"
+            app:destination="@id/createApiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_trending"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.trendding.TrendingFragment"
+        android:label="fragment_trending"
+        tools:layout="@layout/fragment_trending" >
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.setting.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" />
+    <fragment
+        android:id="@+id/playbackgroundFragment"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.setting.BackgroundFragment"
+        android:label="fragment_playbackground"
+        tools:layout="@layout/fragment_playbackground" />
+    <fragment
+        android:id="@+id/getNotificationFragment"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.setting.NotificationFragment"
+        android:label="fragment_get_notification"
+        tools:layout="@layout/fragment_get_notification" />
+    <fragment
+        android:id="@+id/policyFragment"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.setting.PolicyFragment"
+        android:label="fragment_policy"
+        tools:layout="@layout/fragment_policy" />
+    <fragment
+        android:id="@+id/createApiFragment"
+        android:name="vn.tapbi.youtubeplayer3.ui.main.setting.KeyApiFragment"
+        android:label="fragment_create_api"
+        tools:layout="@layout/fragment_create_api" />
+</navigation>

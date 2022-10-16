@@ -1,0 +1,140 @@
+ext {
+    versions = [
+            /*sdk build tool */
+            minSdkVersion            : 21,
+            targetSdkVersion         : 30,
+            compileSdkVersion        : 30,
+            buildToolsVersion        : '30.0.2',
+
+            /*plugin*/
+            googleServices           : '4.3.4',
+            firebaseCrashlyticGradle : '2.4.1',
+
+            /*common lib*/
+            appCompatVersion         : '1.2.0',
+            androidxNavigationVersion: '2.3.4',
+            dagger2Version           : '2.31.1',
+            hiltVersion              : '2.33-beta',
+            lifecycleVersion         : '2.2.0',
+            ktxVersion               : '1.3.2',
+            materialVersion          : '1.3.0',
+
+            /*network*/
+            retrofitVersion          : '2.9.0',
+            okHttpVersion            : "4.9.0",
+
+            /*database*/
+            roomVersion              : '2.3.0-beta02',
+            realmVersion             : '10.1.0',
+
+            /*other*/
+            glideVersion             : '4.12.0',
+            coroutineVersion         : '1.4.2',
+            rxJava                   : '3.0.0',
+            firebaseVersion          : '26.3.0'
+
+
+    ]
+    libraries = [
+            /*Common lib android*/
+            androidAppCopmpat    : "androidx.appcompat:appcompat:$versions.appCompatVersion",
+
+            ktxCore              : "androidx.core:core-ktx:$versions.ktxVersion",
+
+            coroutine            : [
+                    "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutineVersion",
+                    "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutineVersion"
+            ],
+            multidex             : 'androidx.multidex:multidex:2.0.1',
+
+            /*UI lib*/
+            androidxNavigation   : [
+                    "androidx.navigation:navigation-fragment:$versions.androidxNavigationVersion",
+                    "androidx.navigation:navigation-ui:$versions.androidxNavigationVersion",
+            ],
+            androidxNavigationKtx: [
+                    "androidx.navigation:navigation-fragment-ktx:$versions.androidxNavigationVersion",
+                    "androidx.navigation:navigation-ui-ktx:$versions.androidxNavigationVersion"
+            ],
+            androidUICommon      : [
+                    "androidx.constraintlayout:constraintlayout:2.0.4",
+                    "androidx.cardview:cardview:1.0.0",
+                    "androidx.recyclerview:recyclerview:1.1.0",
+                    "androidx.viewpager2:viewpager2:1.0.0",
+
+
+            ],
+            // ViewModel and LiveData
+            lifeCycle            : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycleVersion",
+            lifeCycleKtx         : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion",
+
+            materialDesign       : "com.google.android.material:material:$versions.materialVersion",
+
+            customFont           : [
+                    'io.github.inflationx:calligraphy3:3.1.1',
+                    'io.github.inflationx:viewpump:2.0.3'
+            ],
+
+            /*Dagger2 include annotationProcessor and kapt*/
+            dagger2              : "com.google.dagger:dagger:${versions.dagger2Version}",
+            dagger2Kpt           : "com.google.dagger:dagger-compiler:${versions.dagger2Version}",
+
+            dagger2Android       : [
+                    "com.google.dagger:dagger:$versions.dagger2Version",
+                    "com.google.dagger:dagger-android:$versions.dagger2Version",
+                    "com.google.dagger:dagger-android-support:$versions.dagger2Version"
+            ],
+
+            dagger2AndroidAP     : [
+                    "com.google.dagger:dagger-compiler:$versions.dagger2Version",
+                    "com.google.dagger:dagger-android-processor:$versions.dagger2Version"
+            ],
+
+            /*Hilt setup more detailt in https://dagger.dev/hilt/gradle-setup*/
+            hilt                 : "com.google.dagger:hilt-android:$versions.hiltVersion",
+            hiltAP               : "com.google.dagger:hilt-android-compiler:$versions.hiltVersion",
+            hiltKpt              : "com.google.dagger:hilt-android-compiler:$versions.hiltVersion",
+
+            /*Rxjava*/
+            rxJava               : [
+                    "io.reactivex.rxjava3:rxjava:$versions.rxJava",
+                    "io.reactivex.rxjava3:rxandroid:$versions.rxJava"
+            ],
+
+            /*Glide*/
+            glide                 : "com.github.bumptech.glide:glide:$versions.glideVersion",
+            glideAP               : "com.github.bumptech.glide:compiler:$versions.glideVersion",
+
+            /*Database Room include Coroutine*/
+            room                 : "androidx.room:room-runtime:$versions.roomVersion",
+            // optional - RxJava support for Room
+            roomRxjava           : "androidx.room:room-rxjava3:$versions.roomVersion",
+            // optional - Guava support for Room, including Optional and ListenableFuture
+            roomGuava            : "androidx.room:room-guava:$versions.roomVersion",
+            roomKpt              : "androidx.room:room-ktx:$versions.roomVersion",
+            roomAP               : "androidx.room:room-compiler:$versions.roomVersion",
+
+            gson                 : "com.google.code.gson:gson:2.8.6",
+            /*Network*/
+
+
+            retrofitWithLogger   : [
+                    "com.squareup.retrofit2:retrofit:$versions.retrofitVersion",
+                    "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion",
+                    "com.squareup.okhttp3:logging-interceptor:$versions.okHttpVersion",
+                    "com.squareup.okhttp3:okhttp:$versions.okHttpVersion"
+            ],
+            retrofitRXjavaAdapter: "com.squareup.retrofit2:adapter-rxjava3:$versions.retrofitVersion",
+
+
+            /*Other*/
+            timberLog            : 'com.jakewharton.timber:timber:4.7.1',
+            eventBus             : 'org.greenrobot:eventbus:3.2.0',
+            lottie               : 'com.airbnb.android:lottie:3.6.0',
+    ]
+    testLib = [
+            'androidx.test.ext:junit:1.1.2',
+            'androidx.test.espresso:espresso-core:3.3.0'
+    ]
+
+}

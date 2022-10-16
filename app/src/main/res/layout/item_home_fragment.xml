@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:background="@color/color_textview"
+            tools:src="@drawable/img_home"
+            android:id="@+id/img_video"
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar_video"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@color/color_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_video"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:fontFamily="@font/roboto_regular"
+            android:id="@+id/txt_nameVideo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_marginEnd="28dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/img_avatar_video"
+            app:layout_constraintTop_toBottomOf="@+id/img_video"
+            tools:text="RAP VIỆT Tập 8 | Karik khiến Trấn thành bật khóc, Justa Tee sởn da gà..." />
+
+        <TextView
+            android:fontFamily="@font/roboto_regular"
+            android:id="@+id/txt_timeVideo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/img_avatar_video"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nameVideo"
+            app:layout_constraintVertical_bias="0.642"
+            tools:text="Vie GIAITRI [ RAP VIỆT Official ] - 13M views - 1 week ago" />
+
+        <TextView
+            android:fontFamily="@font/roboto_light"
+            android:id="@+id/txt_durationVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_time_video"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_video"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="20:34" />
+
+        <View
+            android:visibility="invisible"
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/txt_timeVideo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

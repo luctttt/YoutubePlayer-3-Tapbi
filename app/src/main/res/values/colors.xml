@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorThumbaltt">#828282</color>
+    <color name="color_trendding">#0057FF</color>
+    <color name="color_line">#BDBDBD</color>
+    <color name="color_textview">#828282</color>
+
+    <color name="color_editTex_search">#F2F2F2</color>
+
+    <!-- action bar -->
+    <color name="color_oranges">#FF7100</color>
+    <color name="color_red">#FF0000</color>
+    <color name="color_shadow">#40000000</color>
+
+    <color name="text_red_gran_1">#FF7100</color>
+    <color name="text_red_gran_2">#FF0000</color>
+    <color name="text_red_gran_3">#FF0200</color>
+
+    <array name="arrayColor">
+        <item>#FF0000</item>
+        <item>#FF7100</item>
+    </array>
+
+    <array name="colorDefault">
+        <item>#040404</item>
+        <item>#000000</item>
+    </array>
+</resources>

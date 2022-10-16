@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube_player_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contrainsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_topTrendding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/top_4_trendding"
+                android:textColor="@color/color_trendding"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_titleVideo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="left"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_topTrendding"
+                tools:ignore="RtlHardcoded"
+                tools:text="NGƯỜI ƠI NGƯỜI Ở ĐỪNG VỀ - ĐỨC PHÚC x  SUBOI NGƯỜI ƠI NGƯỜI Ở ĐỪNG VỀ - ĐỨC PHÚC x  SUBOI NGƯỜI ƠI NGƯỜI Ở ĐỪNG VỀ - ĐỨC PHÚC x  SUBOI" />
+
+            <TextView
+                android:id="@+id/txt_time_ViewVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_titleVideo"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_textview"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titleVideo"
+                tools:text="2.2M views - 20 hour ago" />
+
+            <TextView
+                android:id="@+id/txt_amountLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20.8dp"
+                android:drawablePadding="8.8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_textview"
+                app:drawableTopCompat="@drawable/icon_like"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txt_amountDislike"
+                app:layout_constraintTop_toBottomOf="@+id/txt_time_ViewVideo"
+                tools:text="400k" />
+
+            <TextView
+                android:id="@+id/txt_amountDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20.8dp"
+                android:drawablePadding="8.8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/color_textview"
+                app:drawableTopCompat="@drawable/icon_dislike"
+                app:layout_constraintLeft_toRightOf="@id/txt_amountLike"
+                app:layout_constraintRight_toLeftOf="@id/txt_share"
+                app:layout_constraintTop_toBottomOf="@+id/txt_time_ViewVideo"
+                tools:text="1M" />
+
+
+            <TextView
+                android:id="@+id/txt_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20.8dp"
+                android:drawablePadding="8.8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/share"
+                android:textColor="@color/color_textview"
+                app:drawableTopCompat="@drawable/icon_share"
+                app:layout_constraintLeft_toRightOf="@id/txt_amountDislike"
+                app:layout_constraintRight_toLeftOf="@id/txt_download"
+                app:layout_constraintTop_toBottomOf="@+id/txt_time_ViewVideo" />
+
+
+            <TextView
+                android:id="@+id/txt_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20.8dp"
+                android:drawablePadding="8.8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/download"
+                android:textColor="@color/color_textview"
+                app:drawableTopCompat="@drawable/icon_download"
+                app:layout_constraintLeft_toRightOf="@+id/txt_share"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_time_ViewVideo" />
+
+
+            <View
+                android:id="@+id/views"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="21dp"
+                android:background="@color/color_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_download" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_avatar_video"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/v1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/views"
+                tools:src="@drawable/img_avar_home" />
+
+
+            <TextView
+                android:id="@+id/txt_nameArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_regular"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_detailVideo"
+                app:layout_constraintStart_toEndOf="@+id/img_avatar_video"
+                app:layout_constraintTop_toBottomOf="@+id/views"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="HELOOOOOOOOO" />
+
+            <TextView
+                android:id="@+id/txt_detailVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:maxLines="3"
+                android:textColor="@color/color_textview"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/img_avatar_video"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nameArtist"
+                tools:text="hyyyyyyyyyyyyyyyyyyyyyyy" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="66dp"
+                android:background="@color/color_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/views" />
+
+
+            <TextView
+                android:id="@+id/txt_textComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/comment"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+            <TextView
+                android:id="@+id/txt_commentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/txt_textComment"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintRight_toLeftOf="@id/btn_showComment"
+                app:layout_constraintStart_toEndOf="@+id/txt_textComment"
+                app:layout_constraintTop_toBottomOf="@+id/v1"
+                tools:text="10K" />
+
+            <ImageView
+                android:id="@+id/btn_showComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/icon_comment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/txt_commentCount"
+                app:layout_constraintTop_toBottomOf="@id/v1"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_authorProfileImageUrl"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/v3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_textComment"
+                tools:src="@drawable/img_avar_home" />
+
+            <TextView
+                android:id="@+id/txt_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_regular"
+                android:maxWidth="300dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/img_authorProfileImageUrl"
+                app:layout_constraintTop_toBottomOf="@+id/txt_commentCount"
+                tools:text="Great!!!Greatreat" />
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@color/color_line"
+                app:layout_constraintTop_toBottomOf="@+id/txt_comment" />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_showComment"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/upnext"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
+

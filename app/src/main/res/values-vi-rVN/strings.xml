@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YoutubePlayer</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="setting">Cài đặt</string>
+    <string name="trending">Nổi bật</string>
+    <string name="home">Trang chủ</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="share">Chia sẻ</string>
+    <string name="download">Tải xuống</string>
+    <string name="upnext">Tiếp theo</string>
+    <string name="comment">Bình luận</string>
+    <string name="youtube_music">Youtube Music</string>
+    <string name="top_4_trendding">#Xếp hạng 4 nổi bật</string>
+    <string name="view">Lượt xem</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="play_background">Chạy màn hình</string>
+    <string name="Get_notifications_in_morning">Thông báo vào mỗi sáng</string>
+    <string name="Policy">Bảo vệ</string>
+    <string name="search_youtube">Tìm kiếm youtube</string>
+    <string name="hello_blank_fragment">blank fragment</string>
+    <string name="title_notifications">Tiêu đề thông báo</string>
+    <string name="title_dashboard">Bảng điều khuyển</string>
+    <string name="title_activity_main2">Tiêu đề màn hình</string>
+    <string name="recent">Gần đây</string>
+    <string name="years_ago">năm trước</string>
+    <string name="hours_ago">giờ trước</string>
+    <string name="minutes_ago">phút trước</string>
+    <string name="seconds_ago">giây trước</string>
+    <string name="days_ago">ngày trước</string>
+    <string name="just_now">vừa xong</string>
+    <string name="trending_videos">Trending videos</string>
+    <string name="on">Bật</string>
+    <string name="off">Tắt</string>
+    <string name="ti_ng_vi_t">Tiếng việt</string>
+    <string name="ti_ng_anh">Tiếng anh</string>
+    <string name="ch_y_d_i_background">Chạy dưới background</string>
+    <string name="b_o_th_c_v_o_7h_s_ng">Báo thức vào 7h sáng</string>
+    <string name="move_to_terms_and_services_page">Di chuyển tới trang điều khoản và dịch vụ</string>
+    <string name="enter_your_key_api">Nhập api của bạn</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="create_api_key">Tạo key api</string>
+    <string name="trending_video">Video nổi bật</string>
+    <string name="network_connection_is_not_available">Kết nối mạng không khả dụng</string>
+    <string name="no_data">Không có dữ liệu</string>
+</resources>
