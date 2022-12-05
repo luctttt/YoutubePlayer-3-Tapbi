@@ -16,8 +16,8 @@ import vn.tapbi.youtubeplayer3.common.ModelHomeSetting;
 
 public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.SettingViewHolder> {
 
-    List<ModelHomeSetting> listFunctionModelHomeSettings;
-    OnClickItemSetting interfaceSetting;
+    private List<ModelHomeSetting> listFunctionModelHomeSettings;
+    private OnClickItemSetting interfaceSetting;
 
     public SettingAdapter(List<ModelHomeSetting> listFunctionModelHomeSettings, OnClickItemSetting interfaceSetting) {
         this.listFunctionModelHomeSettings = listFunctionModelHomeSettings;

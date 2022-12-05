@@ -23,14 +23,14 @@ import vn.tapbi.youtubeplayer3.ui.base.BaseViewModel;
 @HiltViewModel
 public class HomeViewModel extends BaseViewModel {
 
-    ApiInterface apiInterface;
-    VideoRepository videoRepository;
-    MutableLiveData<List<ItemVideo>> liveDataVideo = new MutableLiveData<>();
+    private ApiInterface apiInterface;
+    private VideoRepository videoRepository;
+    private MutableLiveData<List<ItemVideo>> liveDataVideo = new MutableLiveData<>();
 
-    List<String> listApi = Constant.setListApi();
-    int index = 0;
+    private List<String> listApi = Constant.setListApi();
+    private int index = 0;
 
-    MutableLiveData<Boolean> checkStateData = new MutableLiveData<>();
+    private MutableLiveData<Boolean> checkStateData = new MutableLiveData<>();
 
     public MutableLiveData<Boolean> isLoadData() {
         return checkStateData;

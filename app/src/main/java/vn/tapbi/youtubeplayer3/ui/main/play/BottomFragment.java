@@ -28,15 +28,15 @@ import vn.tapbi.youtubeplayer3.ui.utils.Convert;
 
 public class BottomFragment extends BaseBindingFragment<FragmentBottomBinding, VideoViewModel> implements HomeAdapter.OnclickItemVideo{
 
-    ItemVideo item;
-    HomeAdapter mainAdapter = new HomeAdapter();
-    CommentFragment commentFragment = new CommentFragment();
-    boolean isShowComment = false;
+    private ItemVideo item;
+    private HomeAdapter mainAdapter = new HomeAdapter();
+    private CommentFragment commentFragment = new CommentFragment();
+    private boolean isShowComment = false;
 
-    List<ItemComment> listComment = new ArrayList<>();
-    List<ItemVideo> listID = new ArrayList<>();
+    private List<ItemComment> listComment = new ArrayList<>();
+    private List<ItemVideo> listID = new ArrayList<>();
 
-    CallBack callBack;
+    private CallBack callBack;
 
     @Override
     protected Class<VideoViewModel> getViewModel() {

@@ -29,11 +29,11 @@ import vn.tapbi.youtubeplayer3.ui.base.BaseViewModel;
 @HiltViewModel
 public class VideoViewModel extends BaseViewModel { // ctr + alt + j : boi den 1 dong
 
-    ApiInterface apiInterface;
-    VideoRepository videoRepository ;
+    private ApiInterface apiInterface;
+    private VideoRepository videoRepository ;
 
-    MutableLiveData<List<ItemVideo>> videoRelatedLiveData = new MutableLiveData<>();
-    MutableLiveData<List<ItemComment>> commentLiveData = new MutableLiveData<>();
+    private MutableLiveData<List<ItemVideo>> videoRelatedLiveData = new MutableLiveData<>();
+    private MutableLiveData<List<ItemComment>> commentLiveData = new MutableLiveData<>();
 
     @Inject
     public VideoViewModel(ApiInterface apiInterface, VideoRepository videoRepository) {
@@ -53,7 +53,7 @@ public class VideoViewModel extends BaseViewModel { // ctr + alt + j : boi den 1
                 .subscribe(new SingleObserver<VideoRelated>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-
+                        compositeDisposable.add(d);
                     }
 
                     @Override
@@ -85,7 +85,7 @@ public class VideoViewModel extends BaseViewModel { // ctr + alt + j : boi den 1
                         .subscribe(new SingleObserver<ListChannel>() {
                             @Override
                             public void onSubscribe(@NonNull Disposable d) {
-
+                                compositeDisposable.add(d);
                             }
 
                             @Override
@@ -140,7 +140,7 @@ public class VideoViewModel extends BaseViewModel { // ctr + alt + j : boi den 1
                     .subscribe(new SingleObserver<ViewDetailStatistics>() {
                         @Override
                         public void onSubscribe(@NonNull Disposable d) {
-
+                            compositeDisposable.add(d);
                         }
 
                         @Override
@@ -175,7 +175,7 @@ public class VideoViewModel extends BaseViewModel { // ctr + alt + j : boi den 1
                 .subscribe(new SingleObserver<ListComment>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-
+                        compositeDisposable.add(d);
                     }
 
                     @Override

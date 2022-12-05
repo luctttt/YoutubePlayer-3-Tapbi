@@ -17,11 +17,11 @@ import vn.tapbi.youtubeplayer3.databinding.ItemRecentSearchHistoryBinding;
 
 public class RecentAdapter extends RecyclerView.Adapter<RecentAdapter.RecentViewHolder> {
 
-    Context context;
-    clickItemVideoSearch clickItemRecent;
-    List<RecentModel>recentModelList = new ArrayList<>();
+    private Context context;
+    private clickItemVideoSearch clickItemRecent;
+    private List<RecentModel>recentModelList = new ArrayList<>();
 
-    ItemRecentSearchHistoryBinding binding;
+    private ItemRecentSearchHistoryBinding binding;
 
     public RecentAdapter(List<RecentModel> recentModelList , clickItemVideoSearch clickItemRecent) {
         Collections.reverse(recentModelList);
@@ -36,6 +36,7 @@ public class RecentAdapter extends RecyclerView.Adapter<RecentAdapter.RecentView
     }
 
 
+    @NonNull
     public RecentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
          binding = ItemRecentSearchHistoryBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
 

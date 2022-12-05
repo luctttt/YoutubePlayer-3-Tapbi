@@ -27,8 +27,8 @@ public class CommentFragment extends BottomSheetDialogFragment {
     private List<ItemComment> listComments;
     private String commentCount;
 
-    ItemFullCommentBinding binding;
-    boolean isShowComment = false ;
+    private ItemFullCommentBinding binding;
+    private boolean isShowComment = false ;
 
 
     public CommentFragment() {

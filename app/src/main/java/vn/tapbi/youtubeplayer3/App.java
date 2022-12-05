@@ -19,7 +19,7 @@ import vn.tapbi.youtubeplayer3.feature.timber.DebugTree;
 @HiltAndroidApp
 public class App extends MultiDexApplication {
 
-    public static Context mContext;
+    private static Context mContext;
 
     @Override
     public void onCreate() {
@@ -29,7 +29,7 @@ public class App extends MultiDexApplication {
         mContext = this;
         createNotificationChannel();
         initLog();
-        Timber.i(" APP : lucttt language : %s", Locale.getDefault().getLanguage());
+//        Timber.i(" APP : lucttt language : %s", Locale.getDefault().getLanguage());
     }
 
     public static Context getContext() {
@@ -55,10 +55,10 @@ public class App extends MultiDexApplication {
     @Override
     protected void attachBaseContext(Context base) {
         String languageDefault = SharedPreferenceHelper.getLanguage(base);
-        Timber.d("lucttt languageDefault : %s", languageDefault);
+//        Timber.d("lucttt languageDefault : %s", languageDefault);
         if (languageDefault.equals("")) {
             languageDefault = Constant.LANGUAGE_ENGLISH;
-            Timber.d("lucttt : language null");
+//            Timber.d("lucttt : language null");
         }
         super.attachBaseContext(SharedPreferenceHelper.onAttach(base, languageDefault));
     }

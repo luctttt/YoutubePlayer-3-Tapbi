@@ -18,11 +18,11 @@ import vn.tapbi.youtubeplayer3.databinding.ItemRecentSearchBinding;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewModelHistory> {
 
-    List<HistoryModel> historyModels;
-    Context context;
+    private List<HistoryModel> historyModels;
+    private Context context;
 
-    OnclickItemVideoHistory clickItemVideo;
-    ItemRecentSearchBinding bindingHistory;
+    private OnclickItemVideoHistory clickItemVideo;
+    private ItemRecentSearchBinding bindingHistory;
 
     public HistoryAdapter(List<HistoryModel> listData, Context context) {
         Collections.reverse(listData);

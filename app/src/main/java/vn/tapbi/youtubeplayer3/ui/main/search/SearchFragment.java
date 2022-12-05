@@ -30,12 +30,12 @@ import vn.tapbi.youtubeplayer3.ui.splash.SplashActivity;
 
 public class SearchFragment extends BaseBindingFragment<FragmentSearchBinding, SearchViewModel> implements RecentAdapter.clickItemVideoSearch, HistoryAdapter.OnclickItemVideoHistory, SearchAdapter.clickItemVideoSearch {
 
-    SearchAdapter searchAdapter = new SearchAdapter();
-    List<RecentModel> recentModelList;
-    List<HistoryModel> list;
+    private SearchAdapter searchAdapter = new SearchAdapter();
+    private List<RecentModel> recentModelList;
+    private List<HistoryModel> list;
 
     private CallBackItemVideoSearch callBackItemVideoSearch;
-    boolean isLoadVideo = false;
+    private boolean isLoadVideo = false;
 
     public void setInter(CallBackItemVideoSearch callBackItemVideoSearch) {
         this.callBackItemVideoSearch = callBackItemVideoSearch;

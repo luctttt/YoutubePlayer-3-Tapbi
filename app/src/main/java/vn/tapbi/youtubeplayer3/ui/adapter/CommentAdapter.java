@@ -16,8 +16,8 @@ import vn.tapbi.youtubeplayer3.databinding.ItemCommentBinding;
 
 public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewMainHolder> {
 
-    List<ItemComment> mSnippets;
-    Context context;
+    private List<ItemComment> mSnippets;
+    private final Context context;
 
     public CommentAdapter(List<ItemComment> mSnippets, Context context) {
         this.mSnippets = mSnippets;

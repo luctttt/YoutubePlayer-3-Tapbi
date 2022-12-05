@@ -23,8 +23,8 @@ import vn.tapbi.youtubeplayer3.ui.main.HomeActivity;
 
 public class LanguageFragment extends BaseBindingFragmentNoViewModel<FragmentLanguageBinding> {
 
-    Locale myLocale;
-    String currentLanguage = "en", currentLang = "language";
+    private Locale myLocale;
+    private String currentLanguage = "en", currentLang = "language";
 
     @Override
     public int getLayoutId() {

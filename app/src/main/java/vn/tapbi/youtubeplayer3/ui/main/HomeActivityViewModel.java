@@ -20,25 +20,27 @@ import vn.tapbi.youtubeplayer3.data.model.item.VideoDetail;
 import vn.tapbi.youtubeplayer3.data.remote.ApiInterface;
 import vn.tapbi.youtubeplayer3.data.repository.VideoRepository;
 import vn.tapbi.youtubeplayer3.ui.base.BaseViewModel;
+
 @HiltViewModel
 public class HomeActivityViewModel extends BaseViewModel {
 
     /*trending*/
-    ApiInterface apiInterface;
-    VideoRepository videoRepository;
-    MutableLiveData<List<ItemVideo>> liveDataTrending = new MutableLiveData<>();
-    MutableLiveData<Boolean> checkStateDataTrending = new MutableLiveData<>();
+    private ApiInterface apiInterface;
+    private VideoRepository videoRepository;
+    private MutableLiveData<List<ItemVideo>> liveDataTrending = new MutableLiveData<>();
+    private MutableLiveData<Boolean> checkStateDataTrending = new MutableLiveData<>();
 
     /*home*/
-    MutableLiveData<List<ItemVideo>> liveDataVideoHome = new MutableLiveData<>();
-//    List<String> listApi = Constant.setListApi();
-    int index = 0;
-    MutableLiveData<Boolean> checkStateDataHome = new MutableLiveData<>();
+    private MutableLiveData<List<ItemVideo>> liveDataVideoHome = new MutableLiveData<>();
+    //    List<String> listApi = Constant.setListApi();
+    private int index = 0;
+    private MutableLiveData<Boolean> checkStateDataHome = new MutableLiveData<>();
 
     public MutableLiveData<Boolean> isLoadDataHome() {
         return checkStateDataHome;
     }
-    public MutableLiveData<Boolean> isLoadDataTrending(){
+
+    public MutableLiveData<Boolean> isLoadDataTrending() {
         return checkStateDataTrending;
     }
 
@@ -54,7 +56,7 @@ public class HomeActivityViewModel extends BaseViewModel {
                 .subscribe(new SingleObserver<VideoDetail>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-
+                        compositeDisposable.add(d);
                     }
 
                     @Override
@@ -81,7 +83,7 @@ public class HomeActivityViewModel extends BaseViewModel {
                     .subscribe(new SingleObserver<ListChannel>() {
                         @Override
                         public void onSubscribe(@NonNull Disposable d) {
-
+                            compositeDisposable.add(d);
                         }
 
                         @Override
@@ -105,7 +107,7 @@ public class HomeActivityViewModel extends BaseViewModel {
                 .subscribe(new SingleObserver<VideoDetail>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-
+                        compositeDisposable.add(d);
                     }
 
                     @Override
@@ -135,6 +137,7 @@ public class HomeActivityViewModel extends BaseViewModel {
                     .subscribe(new SingleObserver<ListChannel>() {
                         @Override
                         public void onSubscribe(@NonNull Disposable d) {
+                            compositeDisposable.add(d);
                         }
 
                         @Override
@@ -152,17 +155,18 @@ public class HomeActivityViewModel extends BaseViewModel {
 
     }
 
-    public List<ItemVideo> getDataHome(){
+    public List<ItemVideo> getDataHome() {
         return liveDataVideoHome.getValue();
     }
 
-    public List<ItemVideo> getDataTrending(){
+    public List<ItemVideo> getDataTrending() {
         return liveDataTrending.getValue();
     }
 
     public MutableLiveData<List<ItemVideo>> getListItemsTrending() {
         return liveDataTrending;
     }
+
     public MutableLiveData<List<ItemVideo>> getListItemsHome() {
         return liveDataVideoHome;
     }

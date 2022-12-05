@@ -24,11 +24,11 @@ import vn.tapbi.youtubeplayer3.ui.base.BaseViewModel;
 @HiltViewModel
 public class TrendingViewModel extends BaseViewModel {
 
-    ApiInterface apiInterface;
-    VideoRepository videoRepository;
-    MutableLiveData<List<ItemVideo>> liveDataVideo = new MutableLiveData<>();
+    private ApiInterface apiInterface;
+    private VideoRepository videoRepository;
+    private MutableLiveData<List<ItemVideo>> liveDataVideo = new MutableLiveData<>();
 
-    MutableLiveData<Boolean> checkStateData = new MutableLiveData<>();
+    private MutableLiveData<Boolean> checkStateData = new MutableLiveData<>();
 
     public MutableLiveData<Boolean> isLoadData(){
         return checkStateData;
@@ -47,7 +47,7 @@ public class TrendingViewModel extends BaseViewModel {
                 .subscribe(new SingleObserver<VideoDetail>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-
+                        compositeDisposable.add(d);
                     }
 
                     @Override
@@ -76,7 +76,7 @@ public class TrendingViewModel extends BaseViewModel {
                     .subscribe(new SingleObserver<ListChannel>() {
                         @Override
                         public void onSubscribe(@NonNull Disposable d) {
-
+                            compositeDisposable.add(d);
                         }
 
                         @Override

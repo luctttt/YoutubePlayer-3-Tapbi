@@ -31,19 +31,19 @@ import vn.tapbi.youtubeplayer3.ui.base.BaseViewModel;
 @HiltViewModel
 public class SearchViewModel extends BaseViewModel {
 
-    ApiInterface apiInterface;
-    VideoRepository videoRepository;
-    RecentRepository recentRepository;
+    private ApiInterface apiInterface;
+    private VideoRepository videoRepository;
+    private RecentRepository recentRepository;
 
-    MutableLiveData<List<ItemVideo>> videoRelatedLiveData = new MutableLiveData<>();
-    MutableLiveData<Boolean> checkStateData = new MutableLiveData<>();
+    private MutableLiveData<List<ItemVideo>> videoRelatedLiveData = new MutableLiveData<>();
+    private MutableLiveData<Boolean> checkStateData = new MutableLiveData<>();
 
-    MutableLiveData<List<HistoryModel>> getHistory = new MutableLiveData<>();
-    MutableLiveData<List<RecentModel>> searchRecent = new MutableLiveData<>();
-    MutableLiveData<List<HistoryModel>> searchHistory = new MutableLiveData<>();
+    private MutableLiveData<List<HistoryModel>> getHistory = new MutableLiveData<>();
+    private MutableLiveData<List<RecentModel>> searchRecent = new MutableLiveData<>();
+    private MutableLiveData<List<HistoryModel>> searchHistory = new MutableLiveData<>();
 
 
-    boolean isCheckData = false;
+    private boolean isCheckData = false;
 
     public MutableLiveData<Boolean> isLoadData() {
         return checkStateData;
@@ -96,7 +96,7 @@ public class SearchViewModel extends BaseViewModel {
                 .subscribe(new SingleObserver<VideoRelated>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-
+                        compositeDisposable.add(d);
                     }
 
                     @Override
@@ -131,7 +131,7 @@ public class SearchViewModel extends BaseViewModel {
                         .subscribe(new SingleObserver<ListChannel>() {
                             @Override
                             public void onSubscribe(@NonNull Disposable d) {
-
+                                compositeDisposable.add(d);
                             }
 
                             @Override
@@ -192,7 +192,7 @@ public class SearchViewModel extends BaseViewModel {
                     .subscribe(new SingleObserver<ViewDetailStatistics>() {
                         @Override
                         public void onSubscribe(@NonNull Disposable d) {
-
+                            compositeDisposable.add(d);
                         }
 
                         @Override

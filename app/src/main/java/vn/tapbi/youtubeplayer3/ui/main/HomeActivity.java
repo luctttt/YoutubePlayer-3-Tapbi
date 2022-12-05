@@ -48,17 +48,17 @@ import vn.tapbi.youtubeplayer3.ui.utils.Convert;
 public class HomeActivity extends BaseBindingActivity<ActivityFragmentBinding, HomeActivityViewModel> implements HomeFragment.CallBackItemVideo,
         SearchFragment.CallBackItemVideoSearch, TrendingFragment.CallBackItemVideo, BottomFragment.CallBack, VideoFragment.ClickVideo, Playable {
 
-    NavController navController;
-    VideoFragment topFragment;
-    BottomFragment bottomFragment;
+    private NavController navController;
+    private VideoFragment topFragment;
+    private BottomFragment bottomFragment;
 
-    FragmentManager fm = getSupportFragmentManager();
-    ItemVideo item = new ItemVideo();
+    private FragmentManager fm = getSupportFragmentManager();
+    private ItemVideo item = new ItemVideo();
 
-    boolean isFullScreen = true;
-    boolean isPlay = false;
-    boolean isbuffering = false;
-    boolean isCrash = false;
+    private boolean isFullScreen = true;
+    private boolean isPlay = false;
+    private boolean isbuffering = false;
+    private boolean isCrash = false;
 
     Thread thread;
     int duration = 0;

@@ -21,12 +21,12 @@ import vn.tapbi.youtubeplayer3.ui.base.BaseBindingFragmentNoViewModel;
 
 public class VideoFragment extends BaseBindingFragmentNoViewModel<FragmentTopBinding> {
 
-    String videoId = "";
-    ItemVideo item = new ItemVideo();
+    private String videoId = "";
+    private ItemVideo item = new ItemVideo();
     YouTubePlayer youTubePlayer;
 
-    boolean checkPlayVideoBackground = false;
-    boolean isStop = false;
+    private boolean checkPlayVideoBackground = false;
+    private boolean isStop = false;
 
     public static int mState = -1;
     public static final int UNSTARTED = -1;
@@ -76,7 +76,7 @@ public class VideoFragment extends BaseBindingFragmentNoViewModel<FragmentTopBin
                         break;
                     case PAUSED:
                         Timber.d("lucttt : PAUSED");
-                        if (!isStop || !SharedPreferenceHelper.getStateBackground(requireContext())){
+                        if (!isStop || !SharedPreferenceHelper.getStateBackground(requireContext())) {
                             if (mState == PLAYING) {
                                 clickVideo.pause();
                             }
@@ -90,7 +90,7 @@ public class VideoFragment extends BaseBindingFragmentNoViewModel<FragmentTopBin
                         break;
                     case BUFFERING:
                         Timber.d("lucttt : BUFFERING");
-                        if (mState == PLAYING){
+                        if (mState == PLAYING) {
                             clickVideo.ended();
                         }
                         clickVideo.buffering();
@@ -101,7 +101,7 @@ public class VideoFragment extends BaseBindingFragmentNoViewModel<FragmentTopBin
                         mState = PAUSED;
                         break;
                     case UNSTARTED:
-                        if (mState == PLAYING){
+                        if (mState == PLAYING) {
                             clickVideo.unStarted();
                         }
                         Timber.d("lucttt : UNSTARTED");
